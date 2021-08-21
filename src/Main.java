@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 /**
 * Account Book for personal use
 *
@@ -8,8 +10,9 @@
 
 public class Main {
 	public static void main(String args[]) {
-		CreditCard C = new CreditCard("Credit Card", "1234123412341234", 1234.56, 123.45, "Name", "User", 12000, 15);
+		CreditCard C = new CreditCard("CreditCard", "1234123412341234", 150.50, 130.30, "name", "user", 15000, 15, LocalDate.of(2015, 06, 10));
 		C.printInfo(C);
-		
+		C.purchase(150);
+		System.out.println(C.getCurrentBalance());
 	}
 }
